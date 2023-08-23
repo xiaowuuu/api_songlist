@@ -13,9 +13,10 @@ function ListContainer() {
             })
     }, [])
     // top 20 songs
-    const topTwentySongs = songList.map((song) => {
+    const topTwentySongs = songList.map((song, i) => {
         // return <li>{song.entry}</li>
-        return <li>{song.title.label}</li>
+
+        return <li key={i}><span>{i+1}---{song.title.label}</span></li>
     })
     return (
         <>
